@@ -1,5 +1,5 @@
 
-[MarkLike (v0.1)](HTTPS://GitHub.com/LongTengDao/MarkLike/)
+[MarkLike (v0.2)](HTTPS://GitHub.com/LongTengDao/MarkLike/)
 =================
 
 MarkLike uses the way as simple and intuitive as possible, to provide an as general and extensible as possible high descriptive profile writing form (in addition to article writing). It referred to the syntax of XML and TypeScript to some extent.
@@ -131,4 +131,8 @@ type(root, "key", root.get("key"));
 
 ---
 
-MarkLike files must be encoded as UTF and clearly can be specified by BOM or the first ASCII character; only CRLF or LF is understood as a newline character and the full text must be unified (and used as a concatenated character of multi-line strings); only Tab indentation is accepted, and empty lines and the indentation of empty lines are sensitive.
+MarkLike files must be encoded as UTF and clearly can be specified by BOM or the first ASCII character;
+only CRLF or LF is understood as a newline character and the full text must be unified (and used as a concatenated character of multi-line strings), there can be no separate CR characters in the document;
+only Tab indentation is accepted, and empty lines and the indentation of empty lines are sensitive, except for indentation, only multi-line strings can directly contain Tab characters.
+
+MarkLike file's extension is `.ml`.
