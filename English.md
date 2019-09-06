@@ -1,5 +1,5 @@
 
-[MarkLike (v0.2)](HTTPS://GitHub.com/LongTengDao/MarkLike/)
+[MarkLike (v0.3)](HTTPS://GitHub.com/LongTengDao/MarkLike/)
 =================
 
 MarkLike uses the way as simple and intuitive as possible, to provide an as general and extensible as possible high descriptive profile writing form (in addition to article writing). It referred to the syntax of XML and TypeScript to some extent.
@@ -8,12 +8,12 @@ MarkLike entrusted the responsibility of whether the final document was intuitiv
 
 ---
 
-There are only three original atomic values in MarkLike: existence, integer and text.
+There are only two original atomic values in MarkLike: string and existence.
 
 There is only one original data structure, which allows key-value pairs to coexist with index values and keeps them in order.
 
 ```
-<x: a: b:=1 c:=-1 d:="inline string" e:=""">
+<x: a: b:="inline string" c:=""">
 	multi-line string
 <y:=""">
 	multi-line string
@@ -34,10 +34,8 @@ This example can be implemented in JavaScript as follows:
 $(
 	["x", $(
 		["a"],
-		["b", 1n],
-		["c", -1n],
-		["d", "inline string"],
-		["e", "multi-line string"],
+		["b", "inline string"],
+		["c", "multi-line string"],
 	)],
 	["y", "multi-line string"],
 	["z", $(
